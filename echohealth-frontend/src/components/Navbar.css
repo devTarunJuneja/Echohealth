@@ -1,0 +1,28 @@
+/* src/components/Navbar.css */
+.navbar {
+  position: fixed; top: 0; width: 100%; z-index: 50;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1rem 2rem;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+.navbar.transparent {
+  background: transparent;
+}
+.navbar.transparent .logo img { filter: brightness(0) invert(1); }
+.navbar.transparent .icons button,
+.navbar.transparent .auth-button { color: white; }
+
+.navbar.solid {
+  background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.navbar.solid .logo img { filter: none; }
+.navbar.solid .icons button,
+.navbar.solid .auth-button { color: #333; }
+
+.auth-button {
+  display: flex; align-items: center;
+  font-size: 0.875rem; margin-left: 1rem;
+  padding: 0.5rem 1rem; border: none; cursor: pointer;
+}
+.auth-button.login { background: #3b82f6; color: white; border-radius: 0.375rem; }
+.auth-button.logout { background: #ef4444; color: white; border-radius: 0.375rem; }
